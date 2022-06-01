@@ -1,5 +1,5 @@
-#original from :
-#https://github.com/G-Node/gogs/blob/master/conf/datacite/datacite.yml
+# Index file
+
 
 
 # Metadata for DOI registration according to DataCite Metadata Schema 4.1.
@@ -9,12 +9,11 @@
 
 # The main researchers involved. Include digital identifier (e.g., ORCID)
 # if possible, including the prefix to indicate its type.
-
 authors:
   -
-    firstname: "Claudio"
-    lastname: "D'Onofrio"
-    affiliation: "Lund University, ICOS Carbon Portal"
+    firstname: "Jane"
+    lastname: "Due"
+    affiliation: "European University, 2nd Dummy Portal"
     id: "ORCID:0000-0002-1982-3889"
 
   -
@@ -24,7 +23,7 @@ authors:
     id: "ORCID:0000-0002-8158-8787"
 
 # A title to describe the published resource.
-title: "Realtime atmospheric concentration of CO/CO2/CH4"
+title: "Another data specialist"
 
 # Additional information about the resource, e.g., a brief abstract.
 description: |
@@ -96,11 +95,18 @@ resourcetype: Dataset
 # where as the url is assembled from the list in the same order as the 
 # parameters are listed
 
-SD_provider: "ICOS Carbon Portal"
+# Who made the plugin
+SD_provider: "EMBRC"
 
+# Here we assume we have width="40" for the logo which is a .png/.jpg
+SD_logo_url: "https://www.icos-cp.eu/sites/default/files/2017-11/ICOS_CP_logo.png"
+
+# Available plugins are displayed in a dropdown menu 
 SD_URL:
-    base: https://data.icos-cp.eu/dashboard/            
+    plugin_label: 'Some links'
+    base_url: https://data.icos-cp.eu/dashboard/            
     param1:
+        'Birkenes': '?stationId=BIR&valueType=co&height=50'
         'Birkenes': '?stationId=BIR&valueType=co2&height=75'
         'Gartow': '?stationId=GAT&valueType=co2&height=341'
         'Helgoland': '?stationId=HEL&valueType=co2&height=110'
@@ -135,7 +141,8 @@ SD_URL:
         'Zeppelin': '?stationId=ZEP&valueType=co2&height=15'
         'Zugspitze': '?stationId=ZSF&valueType=co2&height=3'
     param2:
-
+ 
+ 
 #preferred size for the widget in pixel
 SD_width: 150
 SD_height: 300
@@ -147,7 +154,4 @@ plugin_template: 1.0
 plugin_author: 'claudio donofrio'
 plugin_contact: 'claudio.donofrio@nateko.lu.se'
 plugin_token: 
-
-
-
 

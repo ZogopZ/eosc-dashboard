@@ -1,5 +1,5 @@
-#original from :
-#https://github.com/G-Node/gogs/blob/master/conf/datacite/datacite.yml
+# Index file
+
 
 
 # Metadata for DOI registration according to DataCite Metadata Schema 4.1.
@@ -9,12 +9,11 @@
 
 # The main researchers involved. Include digital identifier (e.g., ORCID)
 # if possible, including the prefix to indicate its type.
-
 authors:
   -
-    firstname: "Claudio"
-    lastname: "D'Onofrio"
-    affiliation: "Lund University, ICOS Carbon Portal"
+    firstname: "Jane"
+    lastname: "Due"
+    affiliation: "European University, 2nd Dummy Portal"
     id: "ORCID:0000-0002-1982-3889"
 
   -
@@ -24,14 +23,14 @@ authors:
     id: "ORCID:0000-0002-8158-8787"
 
 # A title to describe the published resource.
-title: "Realtime atmospheric concentration of CO/CO2/CH4"
+title: "Another data specialist"
 
 # Additional information about the resource, e.g., a brief abstract.
 description: |
   Realtime insitu measurments of greenhouse gasses
   at different ICOS stations. Available is
   Methane (CH4), Carbon Dioxide (CO2), and Carbon Monoxide (CO)
-  
+
 # Lit of keywords the resource should be associated with.
 # Give as many keywords as possible, to make the resource findable.
 keywords:
@@ -60,7 +59,7 @@ funding:
     awardURI: "https://cordis.europa.eu/project/id/101017536"
     awardNumber: "101017536"
     awardTitle:  "EOSC Future"
-    
+
 # Related publications. reftype might be: IsSupplementTo, IsDescribedBy, IsReferencedBy.
 # Please provide digital identifier (e.g., DOI) if possible.
 # Add a prefix to the ID, separated by a colon, to indicate the source.
@@ -85,7 +84,7 @@ references:
 resourcetype: Dataset
 
 
-# The following section is in regards to the technical specification for access to the scientific key indicator dashboard. We will start all keys with SD_ for Scientific Dashboard 
+# The following section is in regards to the technical specification for access to the scientific key indicator dashboard. We will start all keys with SD_ for Scientific Dashboard
 
 # provide the URL to access an iframe (HTML webpage) which should be displayed
 # base is the base URL (mandatory) which can work on its own,
@@ -93,14 +92,21 @@ resourcetype: Dataset
 # BASE?param1=...&param2=...
 # content for the parameter may be provided with a list
 # the following example will display the 'Key' in a dropdown list
-# where as the url is assembled from the list in the same order as the 
+# where as the url is assembled from the list in the same order as the
 # parameters are listed
 
-SD_provider: "ICOS Carbon Portal"
+# Who made the plugin
+SD_provider: "Euro-Argo"
 
+# Here we assume we have width="40" for the logo which is a .png/.jpg
+SD_logo_url: "https://www.icos-cp.eu/sites/default/files/2017-11/ICOS_CP_logo.png"
+
+# Available plugins are displayed in a dropdown menu
 SD_URL:
-    base: https://data.icos-cp.eu/dashboard/            
+    plugin_label: 'Some links'
+    base_url: https://data.icos-cp.eu/dashboard/
     param1:
+        'Birkenes': '?stationId=BIR&valueType=co&height=50'
         'Birkenes': '?stationId=BIR&valueType=co2&height=75'
         'Gartow': '?stationId=GAT&valueType=co2&height=341'
         'Helgoland': '?stationId=HEL&valueType=co2&height=110'
@@ -136,6 +142,7 @@ SD_URL:
         'Zugspitze': '?stationId=ZSF&valueType=co2&height=3'
     param2:
 
+
 #preferred size for the widget in pixel
 SD_width: 150
 SD_height: 300
@@ -146,8 +153,5 @@ plugin_version: 1.0
 plugin_template: 1.0
 plugin_author: 'claudio donofrio'
 plugin_contact: 'claudio.donofrio@nateko.lu.se'
-plugin_token: 
-
-
-
+plugin_token:
 

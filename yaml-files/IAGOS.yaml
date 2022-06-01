@@ -9,43 +9,38 @@
 
 # The main researchers involved. Include digital identifier (e.g., ORCID)
 # if possible, including the prefix to indicate its type.
-
 authors:
   -
-    firstname: "Claudio"
-    lastname: "D'Onofrio"
-    affiliation: "Lund University, ICOS Carbon Portal"
-    id: "ORCID:0000-0002-1982-3889"
+    firstname: "John"
+    lastname: "Due"
+    affiliation: "Fine University, Some Portal"
+    id: "ORCID:0000-0002-9191-91919"
 
   -
-    firstname: "Alex"
-    lastname: "Vermeulen"
-    affiliation: "ICOS ERIC"
-    id: "ORCID:0000-0002-8158-8787"
+    firstname: ""
+    lastname: ""
+    affiliation: "" 
+    id: ""
 
 # A title to describe the published resource.
-title: "Realtime atmospheric concentration of CO/CO2/CH4"
-
+title: "Some data for you"
 # Additional information about the resource, e.g., a brief abstract.
 description: |
-  Realtime insitu measurments of greenhouse gasses
-  at different ICOS stations. Available is
-  Methane (CH4), Carbon Dioxide (CO2), and Carbon Monoxide (CO)
-  
+  Data of all sorts 
+  look and you will find
+    
 # Lit of keywords the resource should be associated with.
 # Give as many keywords as possible, to make the resource findable.
 keywords:
-  - ICOS
-  - Greenhouse gas concentration
-  - CH4
-  - CO2
-  - CO
-
+  - Data
+  - Graphs
+  - csv
+  
 # License information for this resource. Please provide the license name and/or a link to the license.
 # Please add also a corresponding LICENSE file to the repository.
 license:
-  name: "ICOS CCBY4 Data Licence"
-  url: "http://meta.icos-cp.eu/ontologies/cpmeta/icosLicence"
+  name: "Gnu Licence 1.0"
+  url: ""
 
 
 ## Optional Fields
@@ -96,10 +91,16 @@ resourcetype: Dataset
 # where as the url is assembled from the list in the same order as the 
 # parameters are listed
 
-SD_provider: "ICOS Carbon Portal"
+# Who made the plugin
+SD_provider: "IAGOS"
 
+# Here we assume we have width="40" for the logo which is a .png/.jpg
+SD_logo_url: "https://www.icos-cp.eu/sites/default/files/2017-11/ICOS_CP_logo.png"
+
+# Available plugins are displayed in a dropdown menu 
 SD_URL:
-    base: https://data.icos-cp.eu/dashboard/            
+    plugin_label: 'Dummy links'
+    base_url: https://data.icos-cp.eu/dashboard/            
     param1:
         'Birkenes': '?stationId=BIR&valueType=co2&height=75'
         'Gartow': '?stationId=GAT&valueType=co2&height=341'
@@ -134,8 +135,8 @@ SD_URL:
         'Weybourne': '?stationId=WAO&valueType=co2&height=10'
         'Zeppelin': '?stationId=ZEP&valueType=co2&height=15'
         'Zugspitze': '?stationId=ZSF&valueType=co2&height=3'
-    param2:
-
+    plugin2:
+ 
 #preferred size for the widget in pixel
 SD_width: 150
 SD_height: 300
@@ -147,7 +148,3 @@ plugin_template: 1.0
 plugin_author: 'claudio donofrio'
 plugin_contact: 'claudio.donofrio@nateko.lu.se'
 plugin_token: 
-
-
-
-

@@ -1,13 +1,16 @@
 from dash import Dash, dcc, html, Input, Output
-from yaml import get_infrastructures
 from flask import request
+from ReadPlugins import EoscValueObject
+
+sd_data_obj = EoscValueObject()
+
 
 app = Dash(__name__, )
 
 infrastructure_checklist = dcc.Checklist(
     className='input-checklist',
     id='input-checklist',
-    options=get_infrastructures(),
+    options=sd_data_obj.get_providers(),
     # labelStyle={'display': 'block'},
     inputClassName='input-checkbox',
     labelClassName='label-input'
